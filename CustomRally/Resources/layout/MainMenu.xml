@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/tableLayout1" >
+    <Button
+        android:text="Select Route"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/SelectRoute"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
+    <Button
+        android:text="Create Routes"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/CreateRoutes"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
+    <Button
+        android:text="Leaderboard"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/LeaderBoard"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:onClick="Init()" />
+    <Button
+        android:text="Options"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/Options"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" />
+</TableLayout >

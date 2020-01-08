@@ -13,3 +13,5 @@
 .externalNativeBuild
 .cxx
 .vs
+obj**
+bin**
