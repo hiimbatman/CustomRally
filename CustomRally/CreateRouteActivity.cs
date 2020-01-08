@@ -28,12 +28,19 @@ namespace CustomRally
 
         public void OnMapReady(GoogleMap map)
         {
+            //_map = map;
+
+            //if (_map != null)
+            //{
+            //    displayMap();
+            //}
+
             _map = map;
 
-            if (_map != null)
-            {
-                displayMap();
-            }
+            // Add a marker in Sydney, Australia, and move the camera.
+            LatLng sydney = new LatLng(-34, 151);
+            _map.AddMarker(new MarkerOptions().SetPosition(sydney).SetTitle("Marker in Sydney"));
+            _map.MoveCamera(CameraUpdateFactory.NewLatLng(sydney));
         }
 
         protected override void OnCreate(Bundle bundle)
@@ -43,8 +50,8 @@ namespace CustomRally
                 base.OnCreate(bundle);
                 SetContentView(Resource.Layout.CreateRoutesMap);
                 //Add the map fragment (the map itself) to the android layout
-                _mapFragment = FragmentManager.FindFragmentByTag("map") as MapFragment;
-                if (_mapFragment == null)
+                _mapFragment = MapFragment.NewInstance();
+                if (_mapFragment != null)
                 {
                     GoogleMapOptions mapOptions = new GoogleMapOptions()
                         .InvokeMapType(GoogleMap.MapTypeSatellite)
@@ -160,7 +167,9 @@ namespace CustomRally
             _map.SetIndoorEnabled(true);
             _map.BuildingsEnabled = true;
             _map.MoveCamera(cameraUpdate);
-
+            MarkerOptions options = new MarkerOptions();
+            options = options.SetPosition(new LatLng(0, 0)).SetTitle("Marker");
+            _map.AddMarker(options);
         }
 
 
