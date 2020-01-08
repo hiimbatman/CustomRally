@@ -32,6 +32,7 @@ namespace CustomRally
                 createRouteButton = FindViewById<Button>(Resource.Id.CreateRoutes);
                 leaderBoardButton = FindViewById<Button>(Resource.Id.LeaderBoard);
                 optionButton = FindViewById<Button>(Resource.Id.Options);
+                
 
                 selectRouteButton.Click += (sender, e) =>
                 {
@@ -61,7 +62,6 @@ namespace CustomRally
             {
                 Toast.MakeText(this, e.Message, ToastLength.Long).Show();
             }
-           
         }
 	}
 }

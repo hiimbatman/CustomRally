@@ -13,5 +13,5 @@
 .externalNativeBuild
 .cxx
 .vs
-obj**
-bin**
+\obj**
+\bin**
